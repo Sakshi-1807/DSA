@@ -1,0 +1,16 @@
+public class ReverseString {
+
+    void reverse(char[] s){
+        int n = s.length;
+        int left = 0, right =n-1;
+        char temp;
+        while(left !=right && left < right){
+            temp = s[left];
+            s[left] =s[right];
+            s[right] = temp;
+            left++;
+            right--;
+        }
+        System.out.println(String.valueOf(s));
+    }
+}
