@@ -1,0 +1,31 @@
+public class IsPalindrome {
+public boolean isValid(char c) {
+        if ((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9'))
+            return true;
+
+        return false;
+    }
+
+    public boolean isPalindrome(String s) {
+        s = s.toLowerCase();
+        int n = s.length();
+        int left = 0, right = n - 1;
+        char leftc, rightc;
+
+        while (left < right) {
+            leftc = s.charAt(left);
+            rightc = s.charAt(right);
+            if (!isValid(leftc)) {
+                left++;
+            } else if (!isValid(rightc)) {
+                right--;
+            } else if (leftc != rightc)
+                return false;
+            else {
+                left++;
+                right--;
+            }
+        }
+        return true;
+    }
+}
