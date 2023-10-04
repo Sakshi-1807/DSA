@@ -1,0 +1,18 @@
+public class ReverseWordsOfString {
+    String[] words;
+    public String reverseWordsOfString(String s)
+    {
+        String[] words =s.trim().split(" ");
+        int n = words.length;
+        n=n-1;
+        String str="";
+        while(n>=0){
+            if(!words[n].isBlank()){
+                str += words[n]+" ";
+            }
+            n--;
+
+        }
+        return str.trim();
+    }
+        }
